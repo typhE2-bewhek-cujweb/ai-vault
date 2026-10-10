@@ -12,9 +12,9 @@ _最終更新: 2026-10-10 (Qwen/Bionic) — 骨格作成_
 - 詳細は `memory/decisions.md` を参照
 
 ## 次の手
-- [ ] Notion の中身（.md エクスポート）を memory/ へ移行・圧縮
-- [ ] Mac に Claude Code をインストール（まず node の導入が必要）
-- [ ] Windows: My Drive 内に clone ＋ Obsidian（obsidian-git プラグイン）導入
+- [ ] **Notion のエクスポート**を `notion-export/` に置く → 統合・圧縮して memory/ へ（手順: notion-export/README.md）
+- [ ] Mac: node 導入 → Claude Code（手順: docs/macos-claude-code.md）
+- [ ] Windows: docs/windows-setup.md に従う（Drive 内に clone ＋ Obsidian ＋ obsidian-git）
 - [ ] 同期フロー実機検証（Mac で編集 → Windows に反映されるか）
 
 ## 使い方
