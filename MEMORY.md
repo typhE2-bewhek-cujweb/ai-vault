@@ -12,10 +12,11 @@ _最終更新: 2026-10-10 (Qwen/Bionic) — 骨格作成_
 - 詳細は `memory/decisions.md` を参照
 
 ## 次の手
-- [ ] **Notion のエクスポート**を `notion-export/` に置く → 統合・圧縮して memory/ へ（手順: notion-export/README.md）
-- [ ] Mac: node 導入 → Claude Code（手順: docs/macos-claude-code.md）
-- [ ] Windows: docs/windows-setup.md に従う（Drive 内に clone ＋ Obsidian ＋ obsidian-git）
-- [ ] 同期フロー実機検証（Mac で編集 → Windows に反映されるか）
+1. [ ] **旧Mac（M1 Max）→ 新Mac（M5 Max）へのデータ移行** — 最優先。完了後に以下へ
+2. [ ] Agent Team 再設計（→ projects/agent-team-redesign.md）
+3. [ ] Notion エクスポート → notion-export/（クラウドなので移行と並行可）
+4. [ ] Mac: node → Claude Code（docs/macos-claude-code.md）
+5. [ ] Windows: docs/windows-setup.md ＋ 同期フロー実機検証
 
 ## 使い方
 このファイルを読んでから、`memory/INDEX.md` を見て必要なファイルを読む。
