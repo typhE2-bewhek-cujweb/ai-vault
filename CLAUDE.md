@@ -51,7 +51,10 @@ Claude は `tools/local_llm.py` で Mac 本体の LM Studio に処理を依頼�
 python3 tools/local_llm.py "依頼文"
 python3 tools/local_llm.py -m japanese -f 入力.txt "要約して"
 python3 tools/local_llm.py --list
+python3 tools/local_llm.py --warmup   # 常駐させる2モデルを先に読み込む
 ```
+
+- 常駐は gpt-oss-120b＋LLM-jp-4.1 の2つまで（メモリ128GBのため）。vision（Nemotron）は必要な時だけ使う
 
 - 接続先は `config/local_llm.json` の `hosts` を順に試す（Mac名 `KENs-MBP165.local` → `127.0.0.1` → 予備アドレス）。最後の接続先は `.state/`（git 対象外）に記録される。`--where` で確認できる
 - 認証の鍵は `confidential/lmstudio_token.txt`（git 対象外）。鍵の文字列をチャットや共有ファイルに書かない

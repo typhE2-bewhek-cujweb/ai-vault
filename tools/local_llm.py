@@ -18,6 +18,7 @@ LM Studio の OpenAI 互換 API に送る。標準ライブラリのみで動く
   --max-tokens    出力の上限（既定 4000）
   --json          応答の全情報を JSON で出力
   --where         どの接続先につながるかだけを表示
+  --warmup        config の warmup に挙げたモデル（既定：reasoning・japanese）を先に読み込む
   --print-context 前提情報（システムプロンプト）を表示。LM Studio のプリセット登録用
                   例: python3 tools/local_llm.py --print-context | pbcopy
 
@@ -129,8 +130,18 @@ def main():
     ap.add_argument("--json", action="store_true")
     ap.add_argument("--where", action="store_true")
     ap.add_argument("--print-context", action="store_true")
+    ap.add_argument("--warmup", action="store_true")
     a = ap.parse_args()
     cfg = load_config()
+
+    if a.warmup:
+        for key in cfg.get("warmup", []):
+            mid = cfg["models"].get(key, key)
+            t0 = time.time()
+            request(cfg, "/chat/completions",
+                    {"model": mid, "messages": [{"role": "user", "content": "ok"}], "max_tokens": 1})
+            print(f"{mid}: 読み込み済み（{time.time()-t0:.1f}秒）")
+        return
 
     if a.print_context:
         print(build_context(cfg))

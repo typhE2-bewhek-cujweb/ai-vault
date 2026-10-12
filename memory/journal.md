@@ -10,3 +10,4 @@
 - [2026-10-12 Claude/Cowork] vault を ~/Documents/書類 - KEN’s MBP165/ai-vault から ~/ai-vault へ移動（ユーザーが Finder で実施）。docs の古いパスを修正。LM Studio（Mac本体）を「ローカルネットワークで提供」＋認証ありに設定し、Cowork の作業環境から 192.168.116.150:1234 へ接続・生成できることを確認（gpt-oss-120b、約8.7秒）。前提情報なしだと「ドローン」を「ローン」と誤解した → 用語集と前提情報の自動付与が必要。
 - [2026-10-12 Claude/Cowork] ローカルLLM呼び出し基盤を追加：config/local_llm.json、tools/local_llm.py、prompts/local_system.md、memory/glossary.md、CLAUDE.md に依頼ルール。前提情報付きで再試験し「エンジンドローンの利点」に正答（gpt-oss-120b、3.7秒）。
 - [2026-10-12 Claude/Cowork] 移動対応：local_llm.py に接続先の自動切替（Mac名→127.0.0.1→予備）と --where / --print-context を追加。offline/（README・ひな形）と CLAUDE.md にオフライン作業・引き継ぎ手順を追加。LLM-jp-4.1 で試験（22.9秒、思考型のため遅め）。
+- [2026-10-12 Claude/Cowork] 案C反映：「最後のJITロードモデルのみを保持」オフ＋サーバー再起動で gpt-oss-120b と LLM-jp-4.1 の同時常駐を確認。--warmup 追加。手動で読み込んだモデル（Eject するまで残る）が常駐の妨げになる点に注意。設定変更後はサーバー再起動が必要。

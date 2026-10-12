@@ -23,5 +23,9 @@
     "qwen": "qwen/qwen3.8-27b"
   },
   "default_model": "reasoning",
-  "default_reasoning_effort": "low"
+  "default_reasoning_effort": "low",
+  "warmup": [
+    "reasoning",
+    "japanese"
+  ]
 }
