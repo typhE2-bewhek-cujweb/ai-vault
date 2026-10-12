@@ -1,0 +1,27 @@
+{
+  "_説明": "Claude（Cowork）や Mac 上のスクリプトから LM Studio を呼ぶための設定。接続先は hosts を上から順に試し、最後につながった先を .state/ に記録する。",
+  "hosts": [
+    "KENs-MBP165.local",
+    "127.0.0.1",
+    "192.168.116.150"
+  ],
+  "port": 1234,
+  "probe_timeout_sec": 3,
+  "token_file": "confidential/lmstudio_token.txt",
+  "timeout_sec": 170,
+  "context_files": [
+    "prompts/local_system.md",
+    "memory/glossary.md",
+    "MEMORY.md"
+  ],
+  "models": {
+    "reasoning": "gpt-oss-120b",
+    "japanese": "llm-jp-4.1-32b-a3b-thinking",
+    "general": "google/gemma-4-31b",
+    "vision": "nvidia/nemotron-3-nano-omni",
+    "granite": "granite-4.2-30b-mlx",
+    "qwen": "qwen/qwen3.8-27b"
+  },
+  "default_model": "reasoning",
+  "default_reasoning_effort": "low"
+}

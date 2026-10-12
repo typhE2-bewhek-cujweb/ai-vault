@@ -11,3 +11,6 @@
 - [2026-10-10] (Qwen) 機密データには `confidential/` ディレクトリ（gitignore＝ローカルのみ）を導入。vault は個人端末限定、社内EDR端末には置かない
 - [2026-10-12] (user+Claude) Mac での vault 置き場所を ~/ai-vault（ホーム直下）に変更。2026-10-10 の「~/Documents/ai-vault」を置き換え (~/Documents は iCloud「デスクトップと書類」同期の対象で、confidential/ の鍵が iCloud に上がること・.git が同期で壊れる恐れがあるため)
 - [2026-10-12] (user+Claude) Claude（Cowork）から LM Studio サーバーへ LAN 経由で直接接続する方式を採用。認証トークン必須、トークンは confidential/lmstudio_token.txt に保存 (取り次ぎプログラム不要で、依頼と結果回収を直接行えるため)
+- [2026-10-12] (user+Claude) LM Studio の接続先は IP 固定でなく Mac 名（KENs-MBP165.local）を優先し、つながらなければ 127.0.0.1・予備アドレスを順に試す (Mac はノートで移動が多く、ネットワークごとに IP が変わるため)
+- [2026-10-12] (user) 公共 Wi-Fi でも LM Studio の「ローカルネットワークで提供」はオンのまま運用し、認証トークンで保護する（案B） (切り替えの手間を避けるため。危険度がやや上がることは了承済み)
+- [2026-10-12] (user+Claude) オフライン作業は offline/ に作業メモと成果物を残し、オンライン復帰時に Claude が引き継ぐ (移動中に LM Studio だけで作業できるようにするため)
