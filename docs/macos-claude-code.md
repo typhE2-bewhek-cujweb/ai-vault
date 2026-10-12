@@ -21,7 +21,7 @@ npm install -g @anthropic-ai/claude-code
 
 ## 3. 初回ログイン
 ```
-cd ~/Documents/ai-vault
+cd ~/ai-vault
 claude
 ```
 1. ログイン方式を選択 → ブラウザで Claude アカウントにログイン（Max サブスクがあればそのまま）

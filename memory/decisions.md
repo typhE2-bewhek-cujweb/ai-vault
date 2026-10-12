@@ -9,3 +9,5 @@
 - [2026-10-10] (user+Qwen) 作業順変更：新しいMac（M5 Max）を購入した直後なので、まず古いMac（M1 Max）からのデータ移行を完了させる (移行完了まで vault 本格運用・Agent Team 再設計は保留)
 - [2026-10-10] (user+Qwen) 移行後に Claude Agent Team V1.3（8 Projects ＋ Notionタスクバス ＋ Cowork）を再設計。Notion の役割も再検討 (アジェンダは projects/agent-team-redesign.md)
 - [2026-10-10] (Qwen) 機密データには `confidential/` ディレクトリ（gitignore＝ローカルのみ）を導入。vault は個人端末限定、社内EDR端末には置かない
+- [2026-10-12] (user+Claude) Mac での vault 置き場所を ~/ai-vault（ホーム直下）に変更。2026-10-10 の「~/Documents/ai-vault」を置き換え (~/Documents は iCloud「デスクトップと書類」同期の対象で、confidential/ の鍵が iCloud に上がること・.git が同期で壊れる恐れがあるため)
+- [2026-10-12] (user+Claude) Claude（Cowork）から LM Studio サーバーへ LAN 経由で直接接続する方式を採用。認証トークン必須、トークンは confidential/lmstudio_token.txt に保存 (取り次ぎプログラム不要で、依頼と結果回収を直接行えるため)
